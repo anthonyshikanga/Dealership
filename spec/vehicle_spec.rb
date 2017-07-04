@@ -49,6 +49,14 @@ require('rspec')
       end
     end
 
+    describe("#id") do
+      it("returns the id of the vehicle") do
+        test_vehicle = Vehicle.new("Toyota", "Prius", 2000)
+        test_vehicle.save()
+        expect(test_vehicle.id()).to(eq(1))
+      end
+    end
+
     describe("#age") do
       it("returns the vehicles age") do
         test_vehicle = Vehicle.new("Toyota", "Prius", 2000)
